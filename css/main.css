@@ -1,0 +1,295 @@
+/******************
+*** Aturan Umum *** 
+*******************/
+
+body {
+    background-color: aliceblue;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.delete{
+    margin-top: 70px;
+}
+
+#wrapper {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+h3 {
+    margin-top: 0;
+    color: blue;
+}
+
+li {
+    display: inline-block;
+}
+
+ul {
+    padding: 0;
+}
+
+
+
+/******************
+******** Header *** 
+*******************/
+
+header {
+    /* background-color: rgba(163, 161, 161, 0.241); */
+    background-color: rgba(255, 255, 255, 0.741);
+    margin-bottom: 16px;
+}
+
+header h3 {
+    padding-top: 16px;    
+    margin-left: 36px;
+    font-family: 'Rock Salt', cursive;
+}
+
+header nav div {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-areas: 
+        ". . . . . . . . ."
+        "d d d . . . . f f"
+        ". . . . . . . . .";
+}
+
+header ul {
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-top: 16px;
+    list-style-type: none;
+}
+
+header nav a {
+    grid-area: d;
+    text-align: left;
+}
+
+header nav ul {
+    margin-left: auto;
+    margin-right: 0;
+    grid-area: f;
+}
+
+header nav li {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+/******************
+** Section index.html *** 
+*******************/
+
+#feed-section {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+#tweetbox-section {
+    background-color: white;
+    padding: 10px;
+    overflow: hidden;
+}
+
+#tweetbox-section label {
+    font-style: italic;
+    font-size: 1.2em;
+    margin-bottom: 12px;
+}
+
+#tweetbox-section button {
+    float: right;
+    margin-top: 8px;
+    overflow: hidden;
+}
+
+#tweet-box {
+    display: block;
+    width: 100%;
+}
+
+#feed-box {
+    clear: both;
+    margin-top: 16px;
+}
+
+#profile-section {
+    margin: 8px;
+    padding: 10px;
+    background-color: white;
+}
+
+#profile-section img:nth-child(n+1) {
+    width: 100%;
+    height: 70px;
+    overflow: hidden;
+}
+
+#profile-section img:nth-child(n+2) {
+    width: 100%;
+    width: 80px;
+    height: 80px;
+    margin-top: -50px;
+    border-radius: 50%;
+}
+
+#profile-section h2, #profile-section h3, #profile-section h5 {
+    margin: 0;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#trending-section {
+    margin: 8px;
+    padding: 10px;
+    background-color: white;
+}
+
+#trending-section h4 {
+    margin-left: 20px;
+    margin-bottom: 4px;
+    margin-top: 16px;
+    font-size: 1.4em;
+}
+
+#trending-section li {
+    display: list-item;
+    margin-bottom: 4px;
+}
+
+.tweet {
+    background-color: white;
+    padding: 16px;
+    display: grid;
+    grid-template-areas: 
+        "a a . b b b b b b b"
+        "a a . c c c c c c c"
+        ". . . . . . d d d d";
+    grid-template-columns: repeat(10, 1fr);
+    margin-bottom: 16px;
+}
+
+.tweet img {
+    width: 100%;
+    margin: 20px;
+    grid-area: a;
+}
+
+.tweet video {
+    width: 100%;
+    grid-area: c;
+}
+
+.tweet h3 {
+    margin-top: 12px;
+    margin-bottom: 0;
+    grid-area: b;
+}
+
+.tweet p {
+    grid-area: c;
+}
+
+.tweet span {
+    grid-area: d;
+}
+
+#friend-box {
+    margin-left: 16px;
+    padding: 16px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color: white;
+}
+
+.friend {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    margin-bottom: 16px;
+}
+
+.friend img {
+    width: 40px;
+    margin-top: 8px;
+}
+
+.friend div {
+    margin-left: 16px;
+}
+
+.friend div h4 {
+    margin: 0 0 8px 0;
+}
+
+
+/******************
+** Section Profile.html *** 
+*******************/
+
+#signup-section {
+    grid-template-columns: 1fr;
+}
+
+#signup-section form label{
+    display: block;
+}
+
+fieldset {
+    border: 3px dashed red;
+}
+
+
+/******************
+******** Footer *** 
+*******************/
+
+footer {
+    text-align: center;
+}
+
+footer ul {
+    margin: 0 0 8px;
+}
+
+footer p {
+    /* margin-top: 10px;
+    margin-bottom: 11px;
+    margin-left: 13px;
+    margin-right: 14px; */
+
+    /* margin: 10px 14px 11px 13px; */
+    /* margin: 20px 30px 40px; */
+    /* margin: 50px 30px; */
+    margin: 0 0 4px;
+}
+
+.bottom-nav {
+    margin: 0;
+    font-weight: 700;
+    margin-right: 10px;
+    margin-left: 10px;
+    font-size: 0.9em;
+}
+
+#some-text {
+    font-size: 0.9em;
+}
+
+#copyright-text {
+    font-style: italic;
+    font-size: 0.5em;
+}
+
+#up {
+    position: fixed;
+    bottom:30px;
+    right: 30px;
+    border: 3px solid #73AD21;
+}

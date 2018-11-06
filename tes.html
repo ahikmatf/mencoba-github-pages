@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Twatter | Signup</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link href="https://fonts.googleapis.com/css?family=Rock+Salt|PT+Sans:400,400i,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.0/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <input type="text" name="input" id="form">
+        <input type="submit" onclick="tes()">
+    </div>
+    <script>
+        function tes(){
+            var point = document.getElementById('form').value
+            console.log(point)
+            var xhr = new XMLHttpRequest()
+            xhr.open('POST', 'http://localhost:5000/test-session')
+            xhr.send({
+                'user': point
+            })
+        }
+    </script>
+</body>
+</html>

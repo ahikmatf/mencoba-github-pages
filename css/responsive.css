@@ -1,0 +1,51 @@
+@media screen and (max-width: 480px) {
+    section {
+        grid-template-columns: 1fr;
+    }
+
+    #profile-section {
+        display: none;
+    }
+
+    #trending-section {
+        display: none;
+    }
+
+    #friend-box {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 480px) {
+    body {
+        /* background-color: red; */
+    }
+
+    #feed-section {
+        grid-template-columns: 1fr 2fr;
+    }
+
+    #friend-box {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 720px) {
+    body {
+        /* background-color: green; */
+    }
+
+    #feed-section {
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+    
+    #friend-box {
+        display: inherit;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    body {
+        /* background-color: blue; */
+    }
+}

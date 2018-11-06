@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Twatter | Feed</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css?family=Rock+Salt|PT+Sans:400,400i,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.0/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+</head>
+
+<body id="top">
+    
+    <header>
+        <!-- navigasi -->
+        <nav>
+            <div id="wrapper">
+                <!-- logo, tapi pake teks dulu -->
+                <a href="index.html">
+                    <h3>Twatter <i class="fas fa-store"></i></h3>
+                </a>
+                
+                <ul>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="#">Setting</a></li>
+                    <li><button onclick=removeCookie()>Sign Out</button></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <div id="wrapper">
+        <section id="feed-section">
+            <!-- kiri -->
+            <div>
+                <!-- summary profile -->
+                <div id="profile-section">
+                    <img src="assets/image1.jpg" />
+                    <img src="assets/image1.jpg" />
+                    <h2>malam kamis</h2>
+                    <h3>104K</h3>
+                    <h5>Tweets</h5>
+                </div>
+                
+                <!-- trending -->
+                <div id="trending-section">
+                    <h4><span>#</span> Trending</h4>
+                    <ol>
+                        <li>Massachusets</li>
+                        <li>Pochinki</li>
+                        <li>Twitter</li>
+                        <li>Proyektor</li>
+                        <li>Codewars</li>
+                        <li>Ngeblog</li>
+                        <li>Astrea</li>
+                        <li>Bali</li>
+                        <li>Tenggo</li>
+                        <li>makersdisini</li>
+                        <li>Python</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <!-- tengah -->
+            <div>
+                <!-- tweetbox -->
+                <div id="tweetbox-section">
+                    <form onsubmit="event.preventDefault(); addTweet()">
+                            <label>What's on your minder?</label>
+                            <input type="text" id="tweet-box">
+                            <button type="submit" id="submit-tweet">Tweet!</button>
+                        </form>
+                    </div>
+                    
+                    <!-- tweetsfeed -->
+                <div id="feed-box">
+                    <!-- <div class="tweet">
+                        <img src="assets/image1.jpg" alt="foto orang" />
+                        <h3>Name</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur tempora magni
+                            nesciunt accusantium temporibus.</p>
+                            <span>16:40 - 26 Desember 2017</span>
+                        </div>
+                        <div class="tweet">
+                            <img src="assets/image1.jpg" alt="foto orang" />
+                            <h3>Name</h3>
+                            <video src="assets/v1.mp4" controls muted loop poster="assets/image1.jpg"></video>
+                            <span>16:40 - 26 Desember 2017</span>
+                        </div>
+                        <div class="tweet">
+                            <img src="assets/image1.jpg" alt="foto orang" />
+                            <h3>Name</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur tempora magni nesciunt
+                                accusantium temporibus.</p>
+                                <span>16:40 - 26 Desember 2017</span>
+                            </div>
+                            <div class="tweet">
+                                <img src="assets/image1.jpg" alt="foto orang" />
+                                <h3>Name</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur tempora magni nesciunt
+                                    accusantium temporibus.</p>
+                                    <span>16:40 - 26 Desember 2017</span>
+                                </div>
+                    <div class="tweet">
+                        <img src="assets/image1.jpg" alt="foto orang" />
+                        <h3>Name</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur tempora magni nesciunt
+                            accusantium temporibus.</p>
+                            <span>16:40 - 26 Desember 2017</span>
+                        </div> -->
+                    </div>
+                </div>
+                
+                <!-- kanan -->
+                <div>
+                <!-- friend suggestions -->
+                <div id="friend-box">
+                    <div class="friend">
+                        <img src="assets/image1.jpg" alt="foto orang" />
+                        <div>
+                            <h4>Nanda Hoodie Guy</h3>
+                                <button>Follow</button>
+                            </div>
+                        </div>
+                        <div class="friend">
+                            <img src="assets/image1.jpg" alt="foto orang" />
+                            <div>
+                                <h4>Oka Kumis Kucing</h3>
+                                    <button>Follow</button>
+                                </div>
+                            </div>
+                            <div class="friend">
+                                <img src="assets/image1.jpg" alt="foto orang" />
+                                <div>
+                                    <h4>Dinda Dindong</h3>
+                                        <button>Follow</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </section>
+                    
+                    <footer>
+                        <nav id="target">
+                <ul>
+                    <li class="bottom-nav">About Us</li>
+                    <li class="bottom-nav">Support</li>
+                    <li class="bottom-nav">Terms 'n Cond</li>
+                </ul>
+                <p id="some-text">Situs ini dibuat dengan kesadaran penuh</p>
+                <p id="copyright-text">&copy; Copyright 2018</p>
+            </nav>
+            
+            <button id="up"><a href="#top">Go Up</a></button>
+        </footer>
+    </div>
+    <script src="js/main.js"></script>
+    <script>
+        allTweet()
+        addToLocalStorage()
+    </script>
+    <script>
+        function removeCookie() {
+            document.cookie = 'tokenaing=; expires=Thu, 01 Jan 1970 00:00:01 GMT;'
+            window.location = '/signin.html'
+        }
+    </script>
+</body>
+
+
+</html>
